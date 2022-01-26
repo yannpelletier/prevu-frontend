@@ -1,0 +1,55 @@
+
+.tip-wrapper {
+
+  display: inline-block;
+  position: relative;
+  margin: auto 5px;
+
+  .tip-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 12pt;
+    border-radius: 100px;
+    border: 1px solid #0061ff;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: white;
+    background-color: #3b80ef;
+    outline: none;
+  }
+  .tip-popup-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    /* max-width: 100%; */
+    top: 20px;
+  }
+  .tip-popup-container {
+    transition: 0.25s;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    width: 100%;
+    padding: 10px;
+    background: #f7f7f7;
+    border: 1px solid #d0d0d0;
+    border-radius: 2px;
+    color: #6b6b6b;
+    text-align: left;
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 12pt;
+  }
+  .tip-popup-container.invisible {
+    opacity: 0;
+    top: -10px;
+    z-index: -1;
+    user-select: none;
+  }
+}

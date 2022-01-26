@@ -1,0 +1,103 @@
+/* CSS Document */
+@import "constants";
+@import "components/fullscreen";
+@import "components/tip";
+@import "components/buttons";
+@import "components/checkboxes";
+@import "components/inputboxes";
+@import "components/panes";
+@import "components/range-slider";
+@import "components/field-wrapper";
+@import "components/grid-form";
+@import "responsive";
+
+* {
+  font-family: roboto, sans-serif;
+  box-sizing: border-box;
+ -webkit-overflow-scrolling:touch;
+}
+
+
+html, body {
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+.information-msg {
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.error {
+  color: red;
+}
+.warning {
+  color: #ff6000;
+  margin: 0;
+  font-size: 12pt;
+}
+
+.page-error {
+  color: red;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 14pt;
+}
+
+.success {
+  color: #33bc7a;
+}
+
+.default-link {
+  color: #0064ff;
+  transition: 0.2s;
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    color: #90d4fd;
+  }
+}
+
+.vline-separator-section {
+  border-right: 1px solid #a7a7a7;
+  height: 100%;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid $lightBorderColor;
+  height: 1px;
+  width: 90%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.thin {
+  font-weight: 300;
+}
+
+.grecaptcha-badge {
+  display: none !important;
+}

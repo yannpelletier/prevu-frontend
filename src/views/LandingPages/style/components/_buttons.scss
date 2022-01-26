@@ -1,0 +1,78 @@
+@import "../constants";
+
+%button {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: $mediumTransitionTime;
+}
+
+.primary-btn, %primary-btn {
+  @extend %button;
+  background-color: $primaryColor;
+  padding: 10px 30px;
+  //margin: 10px auto;
+  color: white;
+  border-radius: 40px;
+  font-size: 14pt;
+  &:hover {
+    &:not(:disabled) {
+      background-color: $primaryColorHover;
+    }
+  }
+  &:focus {
+    background-color: $primaryColorHover;
+  }
+  &:disabled {
+    background-color: #c7c7c7;
+    cursor: auto;
+  }
+}
+
+.secondary-btn, %secondary-btn {
+  @extend %button;
+  border: 2px solid $primaryColor;
+  background: none;
+  padding: 8px 28px;
+  //margin: 10px auto;
+  color: #0098ff;
+  border-radius: 40px;
+  font-size: 14pt;
+  &:hover, &:focus {
+    border-color: $primaryColorHover;
+    color: $primaryColorHover;
+  }
+}
+
+.small-primary-btn, %small-primary-btn {
+  @extend %primary-btn;
+  width: max-content;
+  padding: 10px;
+  border-radius: $smallBorderRadius;
+}
+
+.small-secondary-btn, %small-secondary-btn {
+  @extend %secondary-btn;
+
+  padding: 8px;
+  border-radius: $smallBorderRadius;
+}
+
+.back-btn {
+  @extend %button;
+  background: none;
+  padding: 10px 10px 10px 30px;
+  margin-bottom: 10px;
+  font-size: 12pt;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('/img/next.svg');
+    transform: rotate(180deg);
+    left: 0;
+  }
+}

@@ -1,0 +1,43 @@
+@import "../constants";
+
+.input-box, %input-box {
+  font-weight: $lightFontWeight;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid $lightBorderColor;
+  padding: 5px;
+  box-shadow: none;
+  background: rgba(0, 0, 0, 0.04);
+  outline: none !important;
+  transition: $mediumTransitionTime;
+  &:focus, &:focus-within {
+    border-color: $primaryColor;
+  }
+  &:hover:not(:focus):not(:focus-within) {
+    border-color: $regularBorderColor;
+  }
+
+  &.medium {
+    font-size: $mediumFontSize;
+    input, textarea {
+
+      font-size: $mediumFontSize;
+    }
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &textarea {
+    border: 2px solid $lightBorderColor;
+    resize: vertical;
+  }
+  input, textarea {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: $lightFontWeight;
+
+  }
+}

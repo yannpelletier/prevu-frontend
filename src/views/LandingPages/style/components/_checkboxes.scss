@@ -1,0 +1,44 @@
+@import "../constants";
+
+.checkbox {
+  cursor: pointer;
+  border: none;
+  background: white;
+  margin-right: 10px;
+  margin-top: -2.5px;
+  position: relative;
+  outline: none;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 16px;
+    left: 8px;
+    top: -4px;
+    z-index: 1;
+    transform: rotate(0deg);
+    transition: $shortTransitionTime;
+  }
+  &:checked {
+    &::before {
+      border-right: 2px solid $primaryColor;
+      border-bottom: 2px solid $primaryColor;
+      transform: rotate(45deg);
+    }
+  }
+  &:hover {
+    &::after {
+      background: #f7f7f7;
+    }
+  }
+  &::after {
+    content: '';
+    border: 2px solid #959595;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: white;
+    margin: auto;
+    transition: 0.1s;
+  }
+}

@@ -1,0 +1,13 @@
+@import "../constants";
+
+.grid-form, %grid-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+
+  .form-title {
+    font-size: 18pt;
+    font-weight: $regularFontWeight;
+    margin: 0;
+  }
+}

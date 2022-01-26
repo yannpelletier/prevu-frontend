@@ -1,0 +1,38 @@
+
+.register-page-wrapper {
+  min-height: 75vh;
+  background-color: #eff1f8;
+}
+
+.authentication-wrapper {
+  display: grid;
+  grid-gap: 88px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding:50px;
+  background-color: #fff;
+  background-position: 50% 100%, 0 0;
+  background-size: 3000px, auto;
+  background-image: url(../assets/hero-shape.svg), linear-gradient(0deg, #ffffff 30%, #eff1f8 83%);
+  background-repeat: no-repeat, repeat;
+  &.two-columns {
+    grid-template-columns: 400px 400px;
+  }
+  &.one-column {
+    grid-template-columns: 400px;
+  }
+}
+.form-wrapper{
+  background: white;
+  border-radius: 4px;
+  padding:25px;
+}
+@media all and (max-width: 650px) {
+  .authentication-wrapper {
+    padding:0px;
+  }
+}

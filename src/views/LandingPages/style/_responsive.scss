@@ -1,0 +1,25 @@
+@import "constants";
+
+@mixin mobile {
+  @media (max-width: #{$mobileWidth}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$mobileWidth+1}) {
+    @content;
+  }
+}
+
+.mobile {
+  @include desktop {
+    display: none;
+  }
+}
+
+.desktop {
+  @include mobile {
+    display: none;
+  }
+}

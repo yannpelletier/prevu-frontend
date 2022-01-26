@@ -1,0 +1,57 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@vuex-orm/core": "^0.32.5",
+    "@vuex-orm/plugin-axios": "^0.7.0",
+    "axios": "^0.19.0",
+    "babel-polyfill": "^6.26.0",
+    "chart.js": "^2.8.0",
+    "core-js": "^2.6.5",
+    "hooper": "^0.3.4",
+    "konva": "^4.0.12",
+    "laravel-echo": "^1.6.1",
+    "lodash": "^4.17.15",
+    "prerender-spa-plugin": "^3.4.0",
+    "pusher-js": "^5.0.3",
+    "v-stripe-elements": "^1.2.0",
+    "vue": "^2.6.10",
+    "vue-analytics": "^5.17.5",
+    "vue-chartjs": "^3.4.2",
+    "vue-color": "^2.7.0",
+    "vue-echo": "^1.0.2",
+    "vue-google-signin-button": "^1.0.4",
+    "vue-konva": "^2.0.10",
+    "vue-router": "^3.0.3",
+    "vue-stripe-elements-plus": "^0.3.0",
+    "vue-waterfall2": "^1.9.6",
+    "vuex": "^3.1.1",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.7.6",
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "sass": "^1.17.4",
+    "sass-loader": "^7.1.0",
+    "sitemap-webpack-plugin": "^0.7.1",
+    "vue-cli-plugin-vuetify": "^0.6.3",
+    "vue-template-compiler": "^2.6.10",
+    "vuetify": "^2.1.8",
+    "vuetify-loader": "^1.4.3"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

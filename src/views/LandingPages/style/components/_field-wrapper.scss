@@ -1,0 +1,17 @@
+@import "../constants";
+
+.field-wrapper, %field-wrapper {
+  font-weight: $lightFontWeight;
+  display: grid;
+  grid-template-rows: 18pt auto;
+  width: 100%;
+  user-select: none;
+
+  .input-box:not(textarea):not(.full-width) {
+    width: max-content;
+  }
+  textarea.input-box {
+    width: 100%;
+    max-width: 100%;
+  }
+}

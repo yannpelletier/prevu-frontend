@@ -1,0 +1,55 @@
+@import "../constants";
+
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  -ms-appearance: $value;
+  -o-appearance: $value;
+  appearance: $value;
+}
+
+.radio-button {
+  cursor: pointer;
+  border: none;
+  background: white;
+  margin-right: 10px;
+  margin-top: -2.5px;
+  position: relative;
+  outline: none;
+
+  width: 15px;
+  height: 15px;
+  @include appearance(none);
+  &::before {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    left: 5px;
+    top: 5px;
+    border-radius: 100px;
+    z-index: 1;
+    transition: $shortTransitionTime;
+  }
+  &:checked {
+    &::before {
+      background: $primaryColor;
+    }
+  }
+  &:hover {
+    &::after {
+      background: #f7f7f7;
+    }
+  }
+  &::after {
+    content: '';
+    border: 2px solid #959595;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: white;
+    margin: auto;
+    transition: 0.1s;
+    border-radius: 100px;
+  }
+}
